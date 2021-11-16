@@ -23,13 +23,13 @@ A std::unique_ptr owns of the object it points to and no other smart pointers ca
     
         A std::unique_ptr is created like this:
         •	std::unique_ptr<int>    p1(new int);
-        •	std::unique_ptr<int[]>  p2(new int[50]);
-        •	std::unique_ptr<Object> p3(new Object("Lamp"));   
+        •	std::unique_ptr<int[]>  p2(new int[100]);
+        •	std::unique_ptr<Object> p3(new Object("Bingos"));   
         
         It is also possible to construct std::unique_ptr with the help of the special function std::make_unique, like this:
         •	std::unique_ptr<int>    p1 = std::make_unique<int>();    
-        •	std::unique_ptr<int[]>  p2 = std::make_unique<int[]>(50);
-        •	std::unique_ptr<Object> p3 = std::make_unique<Object>("Lamp");
+        •	std::unique_ptr<int[]>  p2 = std::make_unique<int[]>(100);
+        •	std::unique_ptr<Object> p3 = std::make_unique<Object>("Bingos");
 
 ### Characteristic of unique_ptr
 1.	main feature is unique_ptr is, it is destroyed when gone out of scope
@@ -47,12 +47,12 @@ Reference-counted smart pointer. Use when you want to assign one raw pointer to 
   
         A std::shared_ptr is constructed like this:
         •	std::shared_ptr<int>    p1(new int);
-        •	std::shared_ptr<Object> p2(new Object("Lamp"));
+        •	std::shared_ptr<Object> p2(new Object("Bingos"));
     
     
         There is an alternate way to build a std::shared_ptr, powered by the special function std::make_shared:
         •	std::shared_ptr<int>    p1 = std::make_shared<int>();
-        •	std::shared_ptr<Object> p2 = std::make_shared<Object>("Lamp");
+        •	std::shared_ptr<Object> p2 = std::make_shared<Object>("Bingos");
 
 ### Characteristic of shared_ptr
 1.	One of the main features of std::shared_ptr is the ability to track how many pointers refer to the same resource. You can get information on the number or references with the method use_count(). 
